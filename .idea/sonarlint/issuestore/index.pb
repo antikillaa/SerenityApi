@@ -1,0 +1,19 @@
+
+K
+src/test/java/RunTests.java,2\a\2ab3866ccdc5d9dee3a875887221919f595cefbc
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+U
+%src/test/java/context/RunContext.java,c\d\cd9546dd592436220a3b3f50f142c33a42c5ebfc
+F
+application.properties,2\f\2f692484526a88bd040e1ec9f8c211bca74f6755
+Z
+*src/test/java/service/ArticlesService.java,e\2\e2d9a3754ffc44b9ec13863041a2784424151ed8
+Y
+)src/test/java/context/TestProperties.java,1\0\106f1fca6309413eebc17b606e9d3e576335308f
+P
+ src/test/java/model/Article.java,3\9\39e3955d258fe945bd1401c7c3e7749902bc297f
+[
++src/test/java/impl/ArticlesServiceImpl.java,c\b\cb5ce9ac1200d95f9d1cadc90226841c042f3334
+a
+1src/test/java/steps/GeneratePasswordStepdefs.java,d\a\da94d4c134a660924a85d8eb1442a6d014f9a978
