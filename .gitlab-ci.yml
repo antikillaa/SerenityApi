@@ -13,4 +13,4 @@ test:
       when: always
       reports:
         junit: 
-          - target/serenity/site/*
+          - target/site/serenity/*
