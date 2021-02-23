@@ -10,6 +10,7 @@ test:
   script:
     - mvn clean verify
   artifacts:
-    reports:
-          junit:
-            - target/site/index.html
+      when: always
+      reports:
+        junit: 
+          - target/site/index.html
