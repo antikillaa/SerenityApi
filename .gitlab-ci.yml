@@ -13,4 +13,4 @@ test:
       when: always
       reports:
         junit: 
-          - target/site/serenity/*
+          - target/site/serenity/index.html
