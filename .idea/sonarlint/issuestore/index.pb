@@ -17,3 +17,5 @@ P
 +src/test/java/impl/ArticlesServiceImpl.java,c\b\cb5ce9ac1200d95f9d1cadc90226841c042f3334
 a
 1src/test/java/steps/GeneratePasswordStepdefs.java,d\a\da94d4c134a660924a85d8eb1442a6d014f9a978
+>
+.gitlab-ci.yml,5\8\587d266bb27a4dc3022bbed44dfa19849df3044c

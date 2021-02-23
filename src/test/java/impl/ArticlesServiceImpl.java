@@ -1,11 +1,13 @@
 package impl;
 
 import context.TestProperties;
+import io.restassured.response.ValidatableResponse;
 import model.Article;
 import service.ArticlesService;
 
 import java.util.List;
 
+import static context.RunContext.RUN_CONTEXT;
 import static io.restassured.RestAssured.given;
 
 public class ArticlesServiceImpl implements ArticlesService {
@@ -14,10 +16,16 @@ public class ArticlesServiceImpl implements ArticlesService {
     @Override
     public List<Article> getArticles() {
         String URL = testProperties.getURL() + "/articles.json";
-        List<Article> articles = given().log().everything(true)
-                .get(URL)
-                .then().statusCode(200)
-                .extract().jsonPath().getList("articles.", Article.class);
+
+        ValidatableResponse r = given().log().everything(true)
+                        .get(URL)
+                        .then()
+                .log().ifError();
+
+        RUN_CONTEXT.put("response", r);
+
+        List<Article> articles = r.extract().jsonPath().getList("articles.", Article.class);
+
         return articles;
     }
 }
