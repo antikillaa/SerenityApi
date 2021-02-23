@@ -9,3 +9,6 @@ test:
   stage: test
   script:
     - mvn clean verify
+  artifacts:
+    reports:
+      junit: site/index.html
