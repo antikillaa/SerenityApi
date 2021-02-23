@@ -11,4 +11,5 @@ test:
     - mvn clean verify
   artifacts:
     reports:
-      junit: site/index.html
+          junit:
+            - target/site/index.html
