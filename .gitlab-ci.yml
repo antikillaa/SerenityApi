@@ -10,7 +10,6 @@ test:
   script:
     - mvn clean verify
   artifacts:
-      when: always
-      reports:
-        junit: 
-          - target/site/serenity/
+    when: always
+    paths:
+      - target/site/serenity
