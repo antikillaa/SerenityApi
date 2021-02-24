@@ -28,4 +28,16 @@ public class ArticlesServiceImpl implements ArticlesService {
 
         return articles;
     }
+
+    @Override
+    public void getArticles(String url, int status) {
+        String URL = testProperties.getURL() + url;
+
+        ValidatableResponse r = given().log().everything(true)
+                .get(URL)
+                .then()
+                .statusCode(status)
+                .log().ifError();
+
+    }
 }
