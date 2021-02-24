@@ -1,4 +1,6 @@
+@article
 Business Need: Get Articles
+  User needed get the list of Articles
 
   Rule: User should be able get Articles list
     Scenario Template: : Sent request for getting articles
