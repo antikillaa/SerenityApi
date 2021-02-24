@@ -14,30 +14,24 @@ public class ArticlesServiceImpl implements ArticlesService {
     static TestProperties testProperties = new TestProperties();
 
     @Override
-    public List<Article> getArticles() {
+    public List<Article> getListArticles() {
         String URL = testProperties.getURL() + "/articles.json";
 
-        ValidatableResponse r = given().log().everything(true)
-                        .get(URL)
-                        .then()
-                .log().ifError();
-
-        RUN_CONTEXT.put("response", r);
-
-        List<Article> articles = r.extract().jsonPath().getList("articles.", Article.class);
-
-        return articles;
+        return given().log().everything(true)
+                .get(URL).then()
+                .log().ifError()
+                .extract()
+                .jsonPath().getList("articles.", Article.class);
     }
 
     @Override
-    public void getArticles(String url, int status) {
+    public void getListArticles(String url, int status) {
         String URL = testProperties.getURL() + url;
 
-        ValidatableResponse r = given().log().everything(true)
+        given().log().everything(true)
                 .get(URL)
                 .then()
                 .statusCode(status)
                 .log().ifError();
-
     }
 }

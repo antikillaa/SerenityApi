@@ -5,7 +5,7 @@ import model.Article;
 import java.util.List;
 
 public interface ArticlesService {
-    List<Article> getArticles();
+    List<Article> getListArticles();
 
-    void getArticles(String url, int parseInt);
+    void getListArticles(String url, int parseInt);
 }
