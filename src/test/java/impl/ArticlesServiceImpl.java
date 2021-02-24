@@ -1,13 +1,11 @@
 package impl;
 
-import context.TestProperties;
-import io.restassured.response.ValidatableResponse;
+import api.TestProperties;
 import model.Article;
 import service.ArticlesService;
 
 import java.util.List;
 
-import static context.RunContext.RUN_CONTEXT;
 import static io.restassured.RestAssured.given;
 
 public class ArticlesServiceImpl implements ArticlesService {
