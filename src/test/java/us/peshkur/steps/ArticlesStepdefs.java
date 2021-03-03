@@ -1,15 +1,15 @@
-package steps;
+package us.peshkur.steps;
 
-import impl.ArticlesServiceImpl;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import model.Article;
 import org.junit.Assert;
-import service.ArticlesService;
+import us.peshkur.impl.ArticlesServiceImpl;
+import us.peshkur.model.Article;
+import us.peshkur.service.ArticlesService;
 
 import java.util.List;
 
-import static context.RunContext.RUN_CONTEXT;
+import static us.peshkur.context.RunContext.RUN_CONTEXT;
 
 public class ArticlesStepdefs {
 
@@ -17,6 +17,7 @@ public class ArticlesStepdefs {
 
     @Given("Get Articles List Request")
     public void getArticlesRequest() {
+        System.out.println(Thread.currentThread().getId());
         List<Article> articles = articlesService.getListArticles();
         Assert.assertTrue(articles.size() > 0);
         RUN_CONTEXT.put("articles", articles);
@@ -24,6 +25,7 @@ public class ArticlesStepdefs {
 
     @Given("Get Articles {string} Request and get response with {string} code")
     public void getArticlesRequestAndGetResponseWithCode(String url, String status) {
+        System.out.println(Thread.currentThread().getId());
         articlesService.getListArticles(url, Integer.parseInt(status));
     }
 

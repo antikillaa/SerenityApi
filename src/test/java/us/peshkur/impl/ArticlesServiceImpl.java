@@ -1,12 +1,13 @@
-package impl;
+package us.peshkur.impl;
 
-import api.TestProperties;
-import model.Article;
-import service.ArticlesService;
+import us.peshkur.api.TestProperties;
+import us.peshkur.model.Article;
+import us.peshkur.service.ArticlesService;
 
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
+
 
 public class ArticlesServiceImpl implements ArticlesService {
     static TestProperties testProperties = new TestProperties();

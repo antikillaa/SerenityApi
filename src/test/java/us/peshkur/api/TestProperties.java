@@ -1,4 +1,4 @@
-package api;
+package us.peshkur.api;
 
 import lombok.Getter;
 

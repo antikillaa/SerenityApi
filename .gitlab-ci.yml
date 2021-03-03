@@ -9,7 +9,8 @@ test:
   stage: test
   script:
     - mvn clean verify
+    - mvn allure:report
   artifacts:
     when: always
     paths:
-      - target/site/serenity
+      - target\site\allure-maven-plugin

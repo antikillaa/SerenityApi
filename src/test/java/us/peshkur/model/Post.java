@@ -1,4 +1,4 @@
-package model;
+package us.peshkur.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;

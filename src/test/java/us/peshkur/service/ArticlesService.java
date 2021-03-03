@@ -1,6 +1,6 @@
-package service;
+package us.peshkur.service;
 
-import model.Article;
+import us.peshkur.model.Article;
 
 import java.util.List;
 
